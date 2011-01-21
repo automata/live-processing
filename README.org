@@ -1,0 +1,73 @@
+* live-processing
+
+* Introduction
+
+*live-processing* is a [[http://processing.org][Processing]] clone with /livecode/ capabilities.
+
+It's written in [[http://clojure.org][Clojure]] using [[http://github.com/rosado/clj-processing][clj-processing]] and for now supports just a small set of
+Processing functions.
+
+With *live-processing* you don't need to recompile Processing code every time. You can modify
+the code *on-the-fly*.
+
+* Prerequisites
+
+To run *live-processing* you'll need a [[http://java.com][Java runtime]].
+
+* Installation
+
+** Fast way
+
+To demo *live-processing*, just download and run the /jar/:
+
+#+begin_src sh
+$ wget -c http://github.com/automata/live-processing/raw/live-processing.jar
+$ java -jar live-processing.jar &
+#+end_src
+
+Try to edit the code and press *Eval* while it's running!
+
+** Hacking
+
+To hack the code, you'll need [[http://clojure.org][Clojure]] and [[http://github.com/technomancy/leiningen][leiningen]]. To intall both:
+
+#+begin_src sh
+$ cd /usr/local/bin
+$ wget http://github.com/technomancy/leiningen/raw/stable/bin/lein
+$ chmod +x lein
+$ lein self-install
+#+end_src
+
+It'll install leiningen that will self-install itself and other
+dependencies like Clojure itself.
+
+Now download *live-processing* source code from the repos:
+
+#+begin_src sh
+$ git clone git://github.com/automata/live-processing.git
+#+end_src
+
+And use leiningen to download all dependencies:
+
+#+begin_src sh
+$ cd live-processing
+$ lein deps
+#+end_src
+
+If you want to generate the /uberjar/ (a /jar/ containing all the
+dependencies), do:
+
+#+begin_src sh
+$ lein uberjar
+#+end_src
+
+To execute the code on the /REPL/:
+
+#+begin_src sh
+$ lein repl
+#+end_src
+
+* Using
+
+To start hacking on *live-processing* try enter some code on the editor. Then press the *Eval* button
+everytime you want to update the code.
