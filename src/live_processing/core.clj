@@ -63,7 +63,7 @@
 ;;     ;;   (.setBackground (:background app)))
 
 ;;     (doto editor
-      
+
 ;;       (.setFont (:edit-font app))
 ;;       (.setContentType "text/clojure")
 ;;       (.setCaretColor Color/BLACK)
@@ -76,7 +76,7 @@
 ;;       (.add scroller BorderLayout/CENTER)
 ;;       ;; (.add (status-panel editor) BorderLayout/SOUTH)
 ;;       )
-    
+
 ;;     ;; (open-last-file)
 ;;     editor-pane))
 

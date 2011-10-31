@@ -87,7 +87,7 @@
 (--> osc-2 out)
 (--x osc-2 out)
 
-; (--> (--> osc-1 osc-2) out) 
+; (--> (--> osc-1 osc-2) out)
 
 
 
